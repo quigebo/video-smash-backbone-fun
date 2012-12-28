@@ -1,0 +1,16 @@
+#home
+  %header
+    = select_tag 'genre-select', options_for_select(Genre.all.map{|genre| [genre.title, genre.id]}), "data-last_viewed" => cookies[:last_genre_viewed]
+
+  %section#player
+
+  %section#previously-viewed
+    %h3 Previously Viewed
+
+    %ul
+
+%script{ type: 'text/template', id: 'player-template' }
+  = render 'player_template'
+
+%script{ type: 'text/template', id: 'previously-viewed-template' }
+  = render 'previously_viewed_template'

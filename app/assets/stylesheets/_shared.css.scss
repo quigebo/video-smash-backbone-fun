@@ -1,0 +1,14 @@
+@mixin rounded($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+@mixin rounded-right($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  -moz-border-radius-bottomright: $radius;
+  -webkit-border-radius-top-right: $radius;
+  -webkit-border-radius-bottom-right: $radius;
+}

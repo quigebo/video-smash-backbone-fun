@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title VideoSmash
+    %meta{ :charset => "UTF-8" }
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+
+    = stylesheet_link_tag    "application", :media => "all"
+    = csrf_meta_tags
+
+  %body
+    #sidebar
+      #logo-background
+      %h1#logo VideoSmash
+    = yield
+    = javascript_include_tag "application"

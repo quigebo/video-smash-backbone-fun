@@ -1,0 +1,117 @@
+@import 'shared';
+
+body {
+  font-family: Helvetica;
+  height: 100%; 
+  margin: 25px 0 0 0;
+  max-height: 100%; 
+  padding: 0;
+}
+
+select#genre-select {
+  font-size: 40px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar {
+  height: 100%;
+  position: absolute;
+  width: 273px;
+}
+
+h1#logo {
+  bottom: 15px;
+  color: #FFF;
+  font-weight: 100;
+  position: relative;
+  right: 20px;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+#logo-background {
+  @include rounded-right(7px);
+  background-color: #000;
+  height: 49px;
+  position: absolute;
+  width: 272px;
+  z-index: -1;
+}
+
+#home {
+  float: left;
+  margin: 10px 0 0 273px;
+
+  header {
+    margin: 0 0 40px 10px;
+  }
+}
+
+section#player {
+  #current-video {
+    width: 480px;
+    height: 293px;
+  }
+
+  #stats {
+    margin-top: 7px;
+    overflow: hidden;
+
+    .video-id {
+      float: left;
+      font-size: 16px;
+    }
+    .genre {
+      float: right;
+      font-size: 14px;
+    }
+  }
+
+  #controls {
+    margin-top: 10px;
+    text-align: center;
+
+    button {
+      @include rounded(5px);
+      background-color: whiteSmoke;
+      border: 1px solid #BBB;
+      border-color: rgba(0, 0, 0, 0.15);
+      font-size: 17px;
+      padding: 5px 42px;
+    }
+  }
+}
+
+section#previously-viewed {
+  h3 {
+    border-bottom: 1px dotted black;
+    font-weight: normal;
+  }
+
+  li.video {
+    margin-bottom: 20px;
+
+    .thumbnail {
+      display: inline-block;
+      height: 60px;
+      width: 100px;
+    }
+
+    .details {
+      bottom: 13px; // boo hack!
+      display: inline-block;
+      margin-left: 5px;
+      position: relative;
+
+      p { line-height: 8px; }
+      p.title { font-size: 16px; }
+      p.date-viewed {
+        font-size: 12px;
+      }
+    }
+  }
+}
